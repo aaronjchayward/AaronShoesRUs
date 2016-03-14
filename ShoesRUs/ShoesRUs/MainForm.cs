@@ -19,17 +19,37 @@ namespace ShoesRUs
             Startup su = new Startup();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            if(login.loggingIn(textBox1.Text, textBox2.Text) != -999)
-            {
-                MessageBox.Show("Logged in successfully!");
-            } else
-            {
-                MessageBox.Show("Login credentials not found!");
-            }
+            grpLogin.Visible = true;
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            grpRegister.Visible = true;
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContact_Click(object sender, EventArgs e)
+        {
+            grpContact.Visible = true;
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            grpProfile.Visible = true;
+        }
+
+        private void btnBasket_Click(object sender, EventArgs e)
+        {
+            grpBasket.Visible = true;
+        }
+
+        
 
     }
 }
