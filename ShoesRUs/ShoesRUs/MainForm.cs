@@ -22,6 +22,7 @@ namespace ShoesRUs
         private void btnLogin_Click(object sender, EventArgs e)
         {
             grpLogin.Visible = true;
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -47,9 +48,7 @@ namespace ShoesRUs
         private void btnBasket_Click(object sender, EventArgs e)
         {
             grpBasket.Visible = true;
-        }
-
-        
+        }        
 
     }
 }
