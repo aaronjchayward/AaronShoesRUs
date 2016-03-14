@@ -10,9 +10,9 @@ namespace ShoesRUs
     class User
     {
         //User Data
-        private int custID;
-        private string custTitle, custName, custDOB, custGender, custEmail, custPhone, custAddNo, custAddSt, custAddCit, custAddCou, custPoCo, custCaTy, custCaNo, custCaCVV, custCaName, custCaEx;
-        private bool admin = false;
+        public int custID;
+        public string custTitle, custName, custDOB, custGender, custEmail, custPhone, custAddNo, custAddSt, custAddCit, custAddCou, custPoCo, custCaTy, custCaNo, custCaCVV, custCaName, custCaEx;
+        public bool admin = false;
 
         //Update the User Data
         public void Update(int custID)
