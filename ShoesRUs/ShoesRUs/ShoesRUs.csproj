@@ -87,6 +87,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basket.cs" />
     <Compile Include="CustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +113,12 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="ViewBasket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBasket.Designer.cs">
+      <DependentUpon>ViewBasket.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBasket.resx">
+      <DependentUpon>ViewBasket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

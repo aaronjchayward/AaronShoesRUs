@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
@@ -41,7 +43,18 @@
             this.grpContact = new System.Windows.Forms.GroupBox();
             this.grpProfile = new System.Windows.Forms.GroupBox();
             this.grpBasket = new System.Windows.Forms.GroupBox();
+            this.cmbShoeSize = new System.Windows.Forms.ComboBox();
+            this.btnAddBasket = new System.Windows.Forms.Button();
+            this.listViewDisplay = new System.Windows.Forms.ListView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnClearBasket = new System.Windows.Forms.Button();
+            this.btnClearItem = new System.Windows.Forms.Button();
+            this.lstBasket = new System.Windows.Forms.ListBox();
             this.grpViewProduct = new System.Windows.Forms.GroupBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.grpBasket.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -100,7 +113,7 @@
             this.btnBasket.Name = "btnBasket";
             this.btnBasket.Size = new System.Drawing.Size(75, 23);
             this.btnBasket.TabIndex = 5;
-            this.btnBasket.Text = "button1";
+            this.btnBasket.Text = "Basket";
             this.btnBasket.UseVisualStyleBackColor = true;
             this.btnBasket.Click += new System.EventHandler(this.btnBasket_Click);
             // 
@@ -115,9 +128,9 @@
             // 
             // grpLogin
             // 
-            this.grpLogin.Location = new System.Drawing.Point(12, 72);
+            this.grpLogin.Location = new System.Drawing.Point(22, 52);
             this.grpLogin.Name = "grpLogin";
-            this.grpLogin.Size = new System.Drawing.Size(120, 83);
+            this.grpLogin.Size = new System.Drawing.Size(48, 28);
             this.grpLogin.TabIndex = 7;
             this.grpLogin.TabStop = false;
             this.grpLogin.Text = "groupBox1";
@@ -125,9 +138,9 @@
             // 
             // grpRegister
             // 
-            this.grpRegister.Location = new System.Drawing.Point(150, 72);
+            this.grpRegister.Location = new System.Drawing.Point(97, 52);
             this.grpRegister.Name = "grpRegister";
-            this.grpRegister.Size = new System.Drawing.Size(154, 83);
+            this.grpRegister.Size = new System.Drawing.Size(73, 28);
             this.grpRegister.TabIndex = 8;
             this.grpRegister.TabStop = false;
             this.grpRegister.Text = "groupBox1";
@@ -135,18 +148,18 @@
             // 
             // grpMain
             // 
-            this.grpMain.Location = new System.Drawing.Point(321, 72);
+            this.grpMain.Location = new System.Drawing.Point(176, 52);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(171, 83);
+            this.grpMain.Size = new System.Drawing.Size(73, 28);
             this.grpMain.TabIndex = 9;
             this.grpMain.TabStop = false;
             this.grpMain.Text = "groupBox1";
             // 
             // grpContact
             // 
-            this.grpContact.Location = new System.Drawing.Point(514, 67);
+            this.grpContact.Location = new System.Drawing.Point(339, 52);
             this.grpContact.Name = "grpContact";
-            this.grpContact.Size = new System.Drawing.Size(151, 88);
+            this.grpContact.Size = new System.Drawing.Size(72, 13);
             this.grpContact.TabIndex = 10;
             this.grpContact.TabStop = false;
             this.grpContact.Text = "groupBox1";
@@ -154,9 +167,9 @@
             // 
             // grpProfile
             // 
-            this.grpProfile.Location = new System.Drawing.Point(688, 72);
+            this.grpProfile.Location = new System.Drawing.Point(428, 43);
             this.grpProfile.Name = "grpProfile";
-            this.grpProfile.Size = new System.Drawing.Size(141, 83);
+            this.grpProfile.Size = new System.Drawing.Size(64, 27);
             this.grpProfile.TabIndex = 11;
             this.grpProfile.TabStop = false;
             this.grpProfile.Text = "groupBox1";
@@ -164,23 +177,131 @@
             // 
             // grpBasket
             // 
-            this.grpBasket.Location = new System.Drawing.Point(861, 72);
+            this.grpBasket.Controls.Add(this.txtPrice);
+            this.grpBasket.Controls.Add(this.txtName);
+            this.grpBasket.Controls.Add(this.cmbShoeSize);
+            this.grpBasket.Controls.Add(this.btnAddBasket);
+            this.grpBasket.Controls.Add(this.listViewDisplay);
+            this.grpBasket.Controls.Add(this.btnCheckout);
+            this.grpBasket.Controls.Add(this.btnClearBasket);
+            this.grpBasket.Controls.Add(this.btnClearItem);
+            this.grpBasket.Controls.Add(this.lstBasket);
+            this.grpBasket.Location = new System.Drawing.Point(22, 86);
             this.grpBasket.Name = "grpBasket";
-            this.grpBasket.Size = new System.Drawing.Size(141, 83);
+            this.grpBasket.Size = new System.Drawing.Size(528, 267);
             this.grpBasket.TabIndex = 12;
             this.grpBasket.TabStop = false;
             this.grpBasket.Text = "groupBox1";
             this.grpBasket.Visible = false;
             // 
+            // cmbShoeSize
+            // 
+            this.cmbShoeSize.FormattingEnabled = true;
+            this.cmbShoeSize.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5"});
+            this.cmbShoeSize.Location = new System.Drawing.Point(412, 154);
+            this.cmbShoeSize.Name = "cmbShoeSize";
+            this.cmbShoeSize.Size = new System.Drawing.Size(121, 21);
+            this.cmbShoeSize.TabIndex = 22;
+            // 
+            // btnAddBasket
+            // 
+            this.btnAddBasket.Location = new System.Drawing.Point(433, 198);
+            this.btnAddBasket.Name = "btnAddBasket";
+            this.btnAddBasket.Size = new System.Drawing.Size(77, 35);
+            this.btnAddBasket.TabIndex = 21;
+            this.btnAddBasket.Text = "Add to basket";
+            this.btnAddBasket.UseVisualStyleBackColor = true;
+            this.btnAddBasket.Click += new System.EventHandler(this.btnAddBasket_Click);
+            // 
+            // listViewDisplay
+            // 
+            this.listViewDisplay.LargeImageList = this.imageList1;
+            this.listViewDisplay.Location = new System.Drawing.Point(6, 19);
+            this.listViewDisplay.Name = "listViewDisplay";
+            this.listViewDisplay.Size = new System.Drawing.Size(195, 121);
+            this.listViewDisplay.SmallImageList = this.imageList1;
+            this.listViewDisplay.TabIndex = 20;
+            this.listViewDisplay.UseCompatibleStateImageBehavior = false;
+            this.listViewDisplay.View = System.Windows.Forms.View.Tile;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "1001.jpg");
+            this.imageList1.Images.SetKeyName(1, "1004.jpeg");
+            this.imageList1.Images.SetKeyName(2, "2001.jpeg");
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Location = new System.Drawing.Point(268, 164);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(92, 55);
+            this.btnCheckout.TabIndex = 18;
+            this.btnCheckout.Text = "Proceed to Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            // 
+            // btnClearBasket
+            // 
+            this.btnClearBasket.Location = new System.Drawing.Point(18, 164);
+            this.btnClearBasket.Name = "btnClearBasket";
+            this.btnClearBasket.Size = new System.Drawing.Size(98, 55);
+            this.btnClearBasket.TabIndex = 18;
+            this.btnClearBasket.Text = "Clear Basket";
+            this.btnClearBasket.UseVisualStyleBackColor = true;
+            this.btnClearBasket.Click += new System.EventHandler(this.btnClearBasket_Click);
+            // 
+            // btnClearItem
+            // 
+            this.btnClearItem.Location = new System.Drawing.Point(122, 164);
+            this.btnClearItem.Name = "btnClearItem";
+            this.btnClearItem.Size = new System.Drawing.Size(92, 55);
+            this.btnClearItem.TabIndex = 17;
+            this.btnClearItem.Text = "Clear Item";
+            this.btnClearItem.UseVisualStyleBackColor = true;
+            this.btnClearItem.Click += new System.EventHandler(this.btnClearItem_Click);
+            // 
+            // lstBasket
+            // 
+            this.lstBasket.FormattingEnabled = true;
+            this.lstBasket.Items.AddRange(new object[] {
+            "Aaron",
+            "Ryan",
+            "Leah",
+            "Viv"});
+            this.lstBasket.Location = new System.Drawing.Point(244, 19);
+            this.lstBasket.Name = "lstBasket";
+            this.lstBasket.Size = new System.Drawing.Size(171, 121);
+            this.lstBasket.TabIndex = 15;
+            // 
             // grpViewProduct
             // 
-            this.grpViewProduct.Location = new System.Drawing.Point(12, 161);
+            this.grpViewProduct.Location = new System.Drawing.Point(255, 52);
             this.grpViewProduct.Name = "grpViewProduct";
-            this.grpViewProduct.Size = new System.Drawing.Size(200, 100);
+            this.grpViewProduct.Size = new System.Drawing.Size(75, 18);
             this.grpViewProduct.TabIndex = 13;
             this.grpViewProduct.TabStop = false;
             this.grpViewProduct.Text = "groupBox1";
             this.grpViewProduct.Visible = false;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(433, 68);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 23;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Location = new System.Drawing.Point(433, 94);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.TabIndex = 24;
             // 
             // MainForm
             // 
@@ -202,7 +323,9 @@
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "S";
+            this.grpBasket.ResumeLayout(false);
+            this.grpBasket.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -223,7 +346,16 @@
         private System.Windows.Forms.GroupBox grpProfile;
         private System.Windows.Forms.GroupBox grpBasket;
         private System.Windows.Forms.GroupBox grpViewProduct;
-
+        private System.Windows.Forms.Button btnClearBasket;
+        private System.Windows.Forms.Button btnClearItem;
+        private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.ListView listViewDisplay;
+        private System.Windows.Forms.ListBox lstBasket;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btnAddBasket;
+        private System.Windows.Forms.ComboBox cmbShoeSize;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtName;
     }
 }
 
